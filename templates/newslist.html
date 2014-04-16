@@ -1,0 +1,30 @@
+{#include file="common_header.html"#}
+
+<div class="content">
+	<div class="left_box">
+        <div class="c_left">
+            <h2>{#$columnfname#}</h2>
+            <ul>
+              {#section name="list" loop=$columnf#}
+              {#$columnf[list]#}
+              {#/section#}
+            </ul>
+        </div>
+        <div class="tel"><img src="/static/images/tel.jpg" /></div>
+    </div>
+    <div class="acon">
+        <ul class="newslist">
+            {#section name="list" loop=$newsList start=$pagestart max=10 step=1#}
+            <li>
+                <p class="title"><a href="/column.php?id={#$newsList[list].cid#}&sid={#$newsList[list].sid#}&nid={#$newsList[list].nid#}" title="{#$newsList[list].title#}" target="_blank">{#$newsList[list].title#}</a><span>[{#$newsList[list].postdate|date_format:"%Y-%m-%d %H:%M:%S"#}]</span></p>
+                <!--<p>{#$newsList[list].content|strip_tags|truncate:100:"..."#}<a href="/column.php?id={#$newsList[list].cid#}&sid={#$newsList[list].sid#}&nid={#$newsList[list].nid#}" class="more">【查看全文】</a></p>-->
+            </li>
+            {#/section#}
+        </ul>
+        <div class="pages">
+            {#$pagenav#}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+{#include file="common_footer.html"#}

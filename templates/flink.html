@@ -1,0 +1,6 @@
+<div class="flink">
+	友情链接：
+	{#section name="list" loop=$flink#}
+	<a href="{#$flink[list].url#}" target="_blank" title="{#$flink[list].name#}">{#$flink[list].name#}</a>
+    {#/section#}
+</div>

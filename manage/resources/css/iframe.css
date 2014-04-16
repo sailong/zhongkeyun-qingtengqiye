@@ -1,0 +1,122 @@
+* {margin:0; padding:0}
+body {
+                font-family: "宋体";
+                color: #555;
+                font-size: 12px;
+                }
+img {border:0}
+fieldset {padding:5px 10px 10px}
+.sbutton {
+				font-family: Verdana, Arial, sans-serif;
+                display: inline-block;
+                background: #459300 url('../images/bg-button-green.gif') top left repeat-x !important;
+                border: 1px solid #459300 !important;
+                padding: 4px 12px 4px 12px !important;
+                color: #fff !important;
+                font-size: 12px !important;
+				line-height:18px;
+                cursor: pointer;
+                }
+                
+.sbutton:hover {
+                text-decoration: underline;
+                }
+                
+.sbutton:active {
+                padding: 5px 7px 3px 7px !important;
+                }
+p {
+                padding: 5px 0 10px 0;
+                line-height: 1.6em;
+                }
+form label {
+                padding: 0 0 4px;
+                font-weight: bold;
+				color:#333;
+                }
+form input.text-input,
+form select,
+form textarea,
+form .wysiwyg {
+                padding: 6px;
+                font-size: 12px;
+                background: #fff url('../images/bg-form-field.gif') top left repeat-x;
+                border: 1px solid #d5d5d5;
+				color: #888;
+				vertical-align:middle;
+                }
+            
+form .small-input {
+                width: 25% !important;
+                }
+                
+form .medium-input {
+                width: 50% !important;
+                }
+                
+form .large-input {
+                width: 97.5% !important;
+				font-size: 16px !important;
+				padding: 8px !important;
+                }
+                
+form textarea {
+                width: 97.5% !important;
+                font-family: Arial, Helvetica, sans-serif;
+                }
+                
+form select {
+                padding: 4px;
+                background: #fff;
+                }
+				
+form input[type="checkbox"],
+form input[type="radio"] {
+				padding: 0;
+                background: none;
+				border: 0;
+                }
+.tab-content {background-color:#fff}
+.tab-content table {
+                width: 100%;
+                border-collapse: collapse;
+                }
+                
+.tab-content table thead th {
+                font-weight: bold;
+                font-size: 15px;
+                border-bottom: 1px solid #ddd;
+				text-align:left;
+                }
+                
+.tab-content tbody {
+                border-bottom: 1px solid #ddd;
+                }
+                
+.tab-content tbody tr {
+                background: #fff;
+                }
+              
+.tab-content tbody tr.alt-row {
+                background: #f3f3f3;
+                }
+                
+.tab-content table td,
+.tab-content table th {
+                padding: 10px;
+                line-height: 1.3em;
+                }        
+				
+.tab-content table tfoot td .bulk-actions {
+                padding: 15px 0 5px 0;
+                } 
+				
+.tab-content table tfoot td .bulk-actions select {
+                padding: 4px;
+				border: 1px solid #ccc;
+                }    
+				
+				
+.hrtab {background-color:#ddd; line-height:22px; font-size:12px; margin:0 auto}
+.hrtab td {background-color:#fff; padding:8px; color:#444;}
+.hrtab li {list-style-type:decimal; list-style-position:inside}

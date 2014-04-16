@@ -1,0 +1,14 @@
+{#include file="common_header.html"#}
+<div class="content img_list_box">
+	<h1 class="title_C">项目展示 - {#$proinfo.pname#}</h1>
+    <div class="img_list_c">
+    	<div class="bimg_p"><img src="{#$proinfo.purl#}" /></div>
+        <div class="txt_p">
+        	<h4><a href="/products.php" class="more_p"><img src="/static/images/fhlb.jpg" /></a>{#$proinfo.pname#}</h4>
+            {#$proinfo.pinfo#}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+{#include file="common_footer.html"#}

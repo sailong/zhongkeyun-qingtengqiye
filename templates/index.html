@@ -1,0 +1,65 @@
+{#include file="header.html"#}
+<body>
+<div class="index_head">
+	<div class="link_a">{#include file="member.html"#}</div>
+</div>
+{#include file="nav.html"#}
+
+
+<div class="box_1">
+	<div class="index_news">
+    	<h3 class="title_h3">
+        	<a href="/column.php?id=6" class="more"><img src="/static/images/more.jpg" /></a><b class="index_title">新闻中心</b>
+        </h3>
+        <ul>
+        	<li><a href="column.php?id={#$picNewsInfo.cid#}&sid={#$picNewsInfo.sid#}&nid={#$picNewsInfo.nid#}" title="{#$picNewsInfo.title#}" target="_blank"><img src="{#$picNewsInfo.pic#}" width="238" height="157" alt="{#$picNewsInfo.title#}" /></a></li>
+            <li class="n_list">
+            	<dl>
+            		{#section name="list" loop=$newsList max=6 step=1#}
+                	<dt><span>{#$newsList[list].postdate|date_format:"%Y/%m/%d"#}</span><a href="/column.php?id={#$newsList[list].cid#}&sid={#$newsList[list].sid#}&nid={#$newsList[list].nid#}" target="_blank" title="{#$newsList[list].title#}">{#$newsList[list].title#}</a></dt>
+                    {#/section#}
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <div class="intr">
+    	<h3><a href="/column.php?id=1" class="more"><img src="/static/images/more.jpg" /></a>公司介绍</h3>
+    	<ul>
+        	<li><img src="/static/images/img3.jpg" /></li>
+            <li class="intr_c">{#$webInfo.webinfom#}</li>
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="zzfw">
+	<ul>
+    	<li><a href="column.php?id=4&sid=12" target="_blank"><img src="/static/images/link1.png" /></a></li>
+        <li><a href="column.php?id=4&sid=13" target="_blank"><img src="/static/images/link2.png" /></a></li>
+        <li><a href="column.php?id=4&sid=14" target="_blank"><img src="/static/images/link3.png" /></a></li>
+        <li><a href="column.php?id=4&sid=15" target="_blank"><img src="/static/images/link4.png" /></a></li>
+        <li><a href="column.php?id=4&sid=16" target="_blank"><img src="/static/images/link5.png" /></a></li>
+        <li><a href="column.php?id=4&sid=17" target="_blank"><img src="/static/images/link6.png" /></a></li>
+        <li><a href="column.php?id=4&sid=18" target="_blank"><img src="/static/images/link7.png" /></a></li>
+    </ul>
+</div>
+<div id="wrapper">
+	<h3 class="title_h3"><a href="products.php" class="more"><img src="/static/images/more.jpg" /></a><b class="index_title">项目展示</b></h3>
+    <div id="carousel">
+    	<ul>
+    		{#section name="list" loop=$proList#}
+			<li><a href="product.php?pid={#$proList[list].id#}" target="_blank"><img src="{#$proList[list].purl#}" /><br />{#$proList[list].pname#}</a></li>
+            {#/section#}
+        </ul>
+    </div>
+</div>
+
+{#include file="flink.html"#}
+<script type="text/javascript" src="/static/js/jquery.jcarousellite.js"></script>
+
+<script type="text/javascript">  
+$("#carousel").jCarouselLite({
+auto: 1800,
+speed: 1500
+});
+</script> 
+{#include file="common_footer.html"#}

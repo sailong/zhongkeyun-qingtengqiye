@@ -1,0 +1,38 @@
+<script>
+	$(function(){
+		$("#online_qq_tab a").toggle(function(){
+				$(this).addClass("flh");
+				$("#onlineService").animate({width:"show"});
+				
+			},function(){
+				$(this).hide().siblings().show();
+				$(this).removeClass("flh");
+				$("#onlineService").animate({width:"hide"});
+				
+		});
+	})
+</script>
+
+<div id="online_qq_layer">
+	<div id="online_qq_tab">
+		<a style="display:block;" href="javascript:void(0);">收缩</a> 
+		<a style="display:none;" href="javascript:void(0);">展开</a>
+	</div>
+	<div id="onlineService">
+		<div class="onlineMenu">
+			<h3 class="tQQ">QQ在线客服</h3>
+			<ul>
+				<li class="tli zixun">在线咨询</li>
+				<li>{#$webInfo.qq1#}</li>
+				<li>{#$webInfo.qq2#}</li>
+				<li>{#$webInfo.qq3#}</li>
+				<li>{#$webInfo.qq4#}</li>
+			</ul>
+			<h3 class="tele">QQ在线客服</h3>
+			<ul>
+				<li class="tli phone">{#$webInfo.webtel#}</li>
+			</ul>
+		</div>
+		<div class="btmbg"></div>
+	</div>
+</div>

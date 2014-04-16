@@ -1,0 +1,23 @@
+{#include file="common_header.html"#}
+
+<div class="content">
+	<div class="left_box">
+        <div class="c_left">
+            <h2>{#$columnfname#}</h2>
+            <ul>
+              {#section name="list" loop=$columnf#}
+              {#$columnf[list]#}
+              {#/section#}
+            </ul>
+        </div>
+        <div class="tel"><img src="/static/images/tel.jpg" /></div>
+    </div>
+    <div class="c_right">
+    	<h1 class="title_C">{#$columnfinfo.sname#}</h1>
+        <div class="content_p">
+        	{#$columnfinfo.stext#}
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+{#include file="common_footer.html"#}

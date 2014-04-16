@@ -1,0 +1,14 @@
+{#include file="common_header.html"#}
+<div class="content img_list_box">
+	<h1 class="title_C">项目展示</h1>
+    <div class="img_list">
+    	<ul>
+    		{#section name="list" loop=$proList#}
+        	<li><a href="product.php?pid={#$proList[list].id#}"><img src="{#$proList[list].purl#}" /><br />{#$proList[list].pname#}</a></li>
+        	{#/section#}
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+
+{#include file="common_footer.html"#}

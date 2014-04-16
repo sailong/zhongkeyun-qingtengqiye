@@ -1,0 +1,51 @@
+{#include file="header.htm"#}
+    <section class="shadow fix">
+    	<div class="picbox">
+            <div class="picbig">
+                <img src="{#$webInfo.picchange1#}" alt="{#$webInfo.title#}" class="cur" />
+                <img src="{#$webInfo.picchange2#}" alt="{#$webInfo.title#}" />
+                <img src="{#$webInfo.picchange3#}" alt="{#$webInfo.title#}" />
+            </div>
+            <div class="picsmall">
+                <span class="cur"><img src="{#$webInfo.picchange1_s#}" alt="{#$webInfo.title#}" /></span>
+                <span><img src="{#$webInfo.picchange2_s#}" alt="{#$webInfo.title#}" /></span>
+                <span><img src="{#$webInfo.picchange3_s#}" alt="{#$webInfo.title#}" /></span>
+            </div>
+        </div>
+    </section>
+    <section class="contentindex fix">
+    	<aside class="prolist">
+        	<h3>{#$itemsname#}</h3>
+            {#include file="class_info_small.htm"#}
+        </aside>
+        <article class="procon">
+        	<div class="gdbox fix">
+            	<h3 class="dt">公司动态</h3>
+                <div class="gd">
+                	<marquee  scrollamount=4 onMouseOver="this.stop()" onMouseOut="this.start()">
+                    {#section name="list" loop=$hotNews#}
+                	&gt;&gt; <a href="/article/{#$hotNews[list].cid#}_{#$hotNews[list].sid#}_{#$hotNews[list].nid#}.html" title="{#$hotNews[list].title#}" target="_blank">{#$hotNews[list].title#}</a>
+                    {#/section#}
+                	</marquee>
+                </div>
+            </div>
+            <div class="box news">
+            	<div class="tit">
+                	<h3 class="xw">{#$indexabout.classname#}</h3>
+                    <span class="more"><a href="/about/" title="{#$indexabout.classname#}"><img src="/static/images/more.gif" alt="" /></a></span>
+                </div>
+                <div class="con">
+                	<p>{#$indexabout.classinfo|strip_tags|truncate:150:"..."#}<a href="/about/" title="公司概况">【详细】</a></p>
+                </div>
+            </div>
+            <div class="box contact">
+            	<div class="tit">
+                	<h3 class="lx">联系方式</h3>
+                </div>
+                <div class="con">
+                	{#$webInfo.webcontact#}
+                </div>
+            </div>
+        </article>
+    </section>
+{#include file="footer.htm"#}
